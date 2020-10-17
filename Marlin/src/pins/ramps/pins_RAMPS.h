@@ -65,12 +65,13 @@
 // Servos
 //
 #ifndef SERVO0_PIN
-  #ifdef IS_RAMPS_13
-    #define SERVO0_PIN                         7
-  #else
+//  #ifdef IS_RAMPS_13
+//    #define SERVO0_PIN                         7
+//  #else
     #define SERVO0_PIN                        11
-  #endif
+//  #endif
 #endif
+
 #ifndef SERVO1_PIN
   #define SERVO1_PIN                           6
 #endif
