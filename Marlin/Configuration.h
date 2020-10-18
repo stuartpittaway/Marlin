@@ -517,16 +517,15 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
-  #endif
-#endif // PIDTEMP
 
 //HICHIC settings
 #define  DEFAULT_Kp 26.09
 #define  DEFAULT_Ki 2.11
 #define  DEFAULT_Kd 80.69
+
+  #endif
+#endif // PIDTEMP
+
 //===========================================================================
 //====================== PID > Bed Temperature Control ======================
 //===========================================================================
@@ -1049,7 +1048,7 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_DEPLOY_PROBE   15 // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points
 #define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
@@ -1061,7 +1060,7 @@
 #define Z_PROBE_OFFSET_RANGE_MAX 20
 
 // Enable the M48 repeatability test to test probe accuracy
-//#define Z_MIN_PROBE_REPEATABILITY_TEST
+#define Z_MIN_PROBE_REPEATABILITY_TEST
 
 // Before deploy/stow pause for user confirmation
 //#define PAUSE_BEFORE_DEPLOY_STOW
@@ -1144,8 +1143,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 180
-#define Y_BED_SIZE 210
+#define X_BED_SIZE 170
+#define Y_BED_SIZE 200
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1413,7 +1412,7 @@
 //  #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
 //  #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
   #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT 20  // Y point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT 40  // Y point for Z homing
 #endif
 
 // Homing speeds (mm/min)
